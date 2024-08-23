@@ -1,0 +1,311 @@
+:root{
+    --ncursor: pointer;
+}
+
+*{
+    margin: 0;
+    padding: 0px;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 700px;    
+    margin-left: auto;
+    margin-right: auto;    
+}
+
+.menu{    
+    background-color: #39343F;
+    padding: 25px;    
+    display: flex;
+    gap:20px;
+    justify-content: space-between;   
+}
+
+.menu h2{     
+    font-size: 50px; 
+    font-family: cursive;          
+}
+
+.topepagina{
+    display: flex;    
+    border-style: solid;
+    border-color: rgba(235, 229, 225, 0.767);
+    border-radius: 5px;
+}
+
+.menu .logo{
+    height: 100px;
+    border-radius: 70px;
+}
+
+
+aside{
+    display: flex;    
+    flex-direction: row;
+    gap: 5px;    
+    max-width: 120px;
+    align-self:center;        
+    padding:5px;  
+    border-style: solid;
+    border-color: rgba(235, 229, 225, 0.767);
+    border-radius: 5px;  
+    height: 110px;    
+}
+
+.redessociales a:hover{
+    background-color: rgb(218, 228, 201);    
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;        
+}
+
+.redessociales li{
+    cursor: var(ncursor);    
+}
+ 
+.menu a{
+    color: white;    
+}
+  
+  .menu a:visited{
+    color: white;
+}
+  
+  .menu a:active{
+    color: white;
+}
+
+ 
+main{
+    max-width: 900px;    
+    margin: 50px auto 0 auto;
+    padding: 0px 5px 15px 5px;    
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+h2{
+    text-shadow:
+    1px 1px 2px black,
+    0 0 1em blue,
+    0 0 0.2em blue;
+    color: white;    
+}    
+
+.menu-links{
+    display: flex;        
+    justify-content: space-around;           
+    height: 65px;
+    padding: 5px;
+    max-width: 700px;   
+    gap: 5px; 
+    border-style: solid;
+    border-color: rgba(235, 229, 225, 0.767);
+    border-radius: 5px;    
+    align-content: center;
+    align-items: center;    
+    cursor: var(ncursor);
+    border-radius: 5px;
+    position: relative;
+    font-size: 20px; 
+    
+}
+   
+.menu-links a:hover{
+    background-color: rgb(218, 228, 201);    
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;        
+}
+  
+.menu-links a{
+    color: white;    
+}
+  
+  .menu-links a:visited{
+    color: white;
+}
+  
+  .menulinks a:active{
+    color: white;
+}    
+
+section{
+    background-color: #b2b1b6; /*#1e1539*/
+    padding: 10px;
+    border-radius: 10px;
+    gap:2px;
+}
+
+
+.datospersonales{
+    display:flex;
+    flex-direction: row;
+    border-style: solid;
+    border-color: rgba(235, 229, 225, 0.767);
+    border-radius: 5px;
+    margin-top: 5px;
+    width: 400px;
+    gap:2px;
+}
+.datospersonales h3{
+    grid-area: titulo;    
+    text-align:center;    
+    font-size: 40px;    
+}
+
+.contenedor .estudios{
+    width: 400px;
+    height: 250px;
+    gap:2px;
+}
+.estudios h2{
+    grid-area: titulo;    
+    text-align:center;    
+}
+
+.experiencia{
+    width: 500px;
+    height: 350px;
+    gap:2px;
+    border-style: solid;
+    border-color: rgba(235, 229, 225, 0.767);
+    border-radius: 5px;    
+}
+.experiencia h2{
+    grid-area: titulo;    
+    text-align:center;    
+}
+
+.habilidades{
+    width: 450px;
+    height: 300px;
+    gap:2px;
+    border-style: solid;
+    border-color: rgba(235, 229, 225, 0.767);
+    border-radius: 5px;
+}
+.habilidades h2{
+    grid-area: titulo;    
+    text-align:center;    
+}
+
+.contenedor .interes{
+    width: 279px;
+    height: 250px;
+    gap:5px;
+}
+.interes h2{
+    grid-area: titulo;    
+    text-align:center;    
+}
+
+
+.contenedor{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-style: solid;
+    border-color: rgba(235, 229, 225, 0.767);
+    border-radius: 5px;
+    gap:2px;
+
+}
+
+.contenedor article{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 60px auto 60px 60px; 
+       
+    grid-template-areas:     
+    /*el titulo ocupa las 2 columnas, la segunda fila tiene contenido y a su lado imagen, la ultima fila la primera columna vacio y luego el boton*/
+    "datospersonales datospersonales"; 
+    "contenido contenido"; 
+    "contenido contenido";
+    "contenido .";     
+    gap: 10px;
+    padding: 2px;    
+    border-style: solid;
+    border-color: rgba(235, 229, 225, 0.767);
+    border-radius: 5px;
+}
+
+.contenedor article h3{
+    grid-area: titulo;
+    align-self: center;
+}
+.contenedor article p{
+    grid-area: contenido;
+}
+.contenedor article h2{
+    grid-area: titulo;
+    align-self: center;
+}
+.contenedor article {
+    grid-area: contenido;
+}
+
+footer{ 
+    display:flex;  
+    flex-direction: column;      
+    margin:auto;
+    border-style: solid;
+    border-color: rgba(235, 229, 225, 0.767);
+    border-radius: 5px;
+    background-color: rgba(16, 11, 31, 0.616);        
+    color: rgb(155, 149, 149);                            
+    width: 500px;    /*era 900*/    
+    gap:10px;      
+    padding:10px;      
+    }
+
+footer #nombre{
+    width: 300px;
+}
+
+footer #comentario{
+    width: 300px;
+}
+
+footer #email{
+    width: 500px;
+}
+
+footer a {
+    display:inline-flex;
+    align-items:center;
+    gap:5px;
+}
+
+footer a::before{    
+    content: url(./imagenes/fecha.svg);       
+}
+
+footer p{
+    align-items: right;
+}
+
+
+@media (min-width:481px) and (max-width:768px){
+    .datospersonales{
+        background-color: white;
+    }
+}
+@media ((min-width:769px) and (max-width:1279px)){
+    .datospersonales{
+        background-color: red;
+
+    }
+    .menu-links{
+        display:none;
+    }
+}
+
+@media (min-width:1280px){
+    .datospersonales{
+        background-color: rgb(224, 228, 224);
+    }
+
+body{
+    background-color: rgba(152, 152, 155, 0.685);
+}
+
